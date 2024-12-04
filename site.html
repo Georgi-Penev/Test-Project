@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+            pointer-events: none;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test</h1>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <div id="group1">
+        <h2>Choose a race:</h2>
+        <button class="hoverButton" id="human" data-tooltip-type="race" data-tooltip-id="human">Human</button>
+        <button class="hoverButton" id="elf" data-tooltip-type="race" data-tooltip-id="elf">Elf</button>
+    </div>
+
+    <div id="group2">
+        <h2>Choose a class:</h2>
+        <button class="hoverButton" id="warrior" data-tooltip-type="job" data-tooltip-id="warrior">Warrior</button>
+        <button class="hoverButton" id="wisard" data-tooltip-type="job" data-tooltip-id="wisard">Wisard</button>
+    </div>
+
+    <h2>Finish:</h2>
+    <button id="finish">Finish</button>
+
+    <script type="module" src="scripts.js">
+
+    </script>
+</body>
+
+</html>
