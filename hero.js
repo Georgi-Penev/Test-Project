@@ -29,5 +29,4 @@ function player(race, raceId, job, jobId) {
 export {
     player
 }
-//fix the logic its broken
 player(allRaces, "human", allJobs, "warrior")
