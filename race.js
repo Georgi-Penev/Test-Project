@@ -26,5 +26,5 @@ export {
     allRaces,
     raceStatsDisplay
 }
-console.log(raceStatsDisplay('elf'))
+//console.log(raceStatsDisplay('elf'))
 //console.log("human")

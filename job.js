@@ -71,5 +71,5 @@ Dexterity Requirement: ${obj[i].dexReq}
     return result
 }
 
-console.log(jobStatsDisplay("warrior"))
+//console.log(jobStatsDisplay("warrior"))
 //console.log(detectObject(warrior.items))

@@ -5,8 +5,6 @@ import { player } from './hero.js';
 const tooltip = document.getElementById("tooltip")
 const buttons = document.querySelectorAll(".hoverButton");
 
-
-
 function showTooltip(tooltipType, tooltipId) {
     const tooltip = document.getElementById('tooltip');
     let tooltipText = ``;
@@ -16,10 +14,7 @@ function showTooltip(tooltipType, tooltipId) {
     } else if (tooltipType === 'job') {
         tooltipText = jobs.jobStatsDisplay(tooltipId)
     }
-
-    // Set tooltip text dynamically
     tooltip.textContent = tooltipText;
-
 }
 
 buttons.forEach(button => {
@@ -53,29 +48,35 @@ function resetButtonColors(buttonGroupId) {
 }
 
 let race = null
+let raceId = null
 let job = null
+let jobId = null
 
 document.getElementById('human').addEventListener('click', () => {
-    race = races.human
+    race = races.allRaces
+    raceId = document.getElementById('human').id
     resetButtonColors('group1');
     changeButtonColor('human')
 })
 document.getElementById('elf').addEventListener('click', () => {
-    race = races.elf
+    race = races.allRaces
+    raceId = document.getElementById('elf').id
     resetButtonColors('group1');
     changeButtonColor('elf')
 })
 document.getElementById('warrior').addEventListener('click', () => {
-    job = jobs.warrior
+    job = jobs.allJobs
+    jobId = document.getElementById('warrior').id
     resetButtonColors('group2');
     changeButtonColor('warrior')
 })
 document.getElementById('wisard').addEventListener('click', () => {
-    job = jobs.wisard
+    job = jobs.allJobs
+    jobId = document.getElementById('wisard').id
     resetButtonColors('group2');
     changeButtonColor('wisard')
 })
 document.getElementById('finish').addEventListener('click', () => {
-    player(race, job)
+    player(race, raceId, job, jobId)
 })
 
