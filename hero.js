@@ -23,10 +23,17 @@ function player(race, raceId, job, jobId) {
             returnedJob[key] = returnedRace[key];
         }
     }
-    //return returnedJob
     console.log(returnedJob)
 }
-export {
-    player
+function displayStats() {
+    return `Health: 
+Strenght: 
+Intelligence: 
+Dexterity: 
+Items:`
 }
-player(allRaces, "human", allJobs, "warrior")
+export {
+    player,
+    displayStats
+}
+//player(allRaces, "human", allJobs, "warrior")

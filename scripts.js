@@ -1,6 +1,7 @@
 import * as jobs from './job.js';
 import * as races from './race.js';
 import { player } from './hero.js';
+import { displayStats } from './hero.js';
 
 const tooltip = document.getElementById("tooltip")
 const buttons = document.querySelectorAll(".hoverButton");
@@ -24,7 +25,6 @@ buttons.forEach(button => {
         const tooltipType = button.getAttribute('data-tooltip-type');
         const tooltipId = this.id;
         showTooltip(tooltipType, tooltipId);
-
 
         const rect = button.getBoundingClientRect();
         tooltip.style.left = `${rect.left + window.scrollX}px`;
@@ -79,4 +79,4 @@ document.getElementById('wisard').addEventListener('click', () => {
 document.getElementById('finish').addEventListener('click', () => {
     player(race, raceId, job, jobId)
 })
-
+document.getElementById('text').innerText = displayStats();

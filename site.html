@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <style>
+        /*move these to a css file*/
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
         }
 
+        h3 {
+            text-align: left;
+            padding-left: 25%;
+            position: absolute;
+            font-size: 20px;
+        }
+
         button {
-            margin: 10px;
-            padding: 10px 20px;
+
+            padding: 0;
             font-size: 16px;
             cursor: pointer;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+
+            align-items: center;
+            justify-content: center;
         }
 
         .tooltip {
@@ -34,9 +48,18 @@
 </head>
 
 <body>
+
+    <h3>Current Stats
+        <div id="text">
+
+        </div>
+    </h3>
+
+
     <h1>Test</h1>
 
     <div id="tooltip" class="tooltip"></div>
+
 
     <div id="group1">
         <h2>Choose a race:</h2>
